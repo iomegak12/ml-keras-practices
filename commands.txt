@@ -1,0 +1,51 @@
+    1  curl https://kurl.sh/2a10d8b | sudo bash
+    2  kubectl get nodes
+    3  kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.9/config/manifests/metallb-native.yaml
+    4  kubectl get pods --all-namespaces
+    5  kubectl get pods --all-namespaces --watch
+    6  kubectl get pods --all-namespaces
+    7  kubectl -n metallb-system get pods
+    8  kubectl api-resources| grep metallb
+    9  kubectl -n metallb-system get pods
+   10  kubectl get deployments -n metallb-system
+   11  kubectl get logs -n metallb-system
+   12  kubectl logs --
+   13  kubectl -n metallb-system get pods
+   14  kubectl logs -p controller-6db6d84dc7-wbttp -n metallb-system
+   15  kubectl -n metallb-system get pods
+   16  kubectl logs -p speaker-l4s6p -n metallb-system
+   17  ls -l /etc/.kube
+   18  ls -l ~/.kube
+   19  ls -l ~/.kube/config
+   20  cat  ~/.kube/config
+   21  kubectl delete -f https://raw.githubusercontent.com/metallb/metallb/v0.13.9/config/manifests/metallb-native.yaml
+   22  cls
+   23  clear
+   24  kubectl get configmap kube-proxy -n kube-system -o yaml | sed -e "s/strictARP: false/strictARP: true/" | kubectl diff -f - -n kube-system
+   25  kubectl get configmap kube-proxy -n kube-system -o yaml | sed -e "s/strictARP: false/strictARP: true/" | kubectl apply -f - -n kube-system
+   26  kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.9/config/manifests/metallb-native.yaml
+   27  nano ip-pool.yaml
+   28  kubectl apply -f ip-pool.yaml
+   29  nano l2advertisement.yaml
+   30  kubectl apply -f l2advertisement.yaml
+   31  nano app-deployment.yaml
+   32  kubectl apply -f app-deployment.yaml
+   33  kubectl get opds
+   34  kubectl get pods
+   35  kubectl get services
+   36  curl -X GET http://172.21.4.100
+   37  sudo apt update
+   38  curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | sudo bash -E -
+   39  helm --version
+   40  helm version
+   41  helm pull oci://ghcr.io/nginxinc/charts/nginx-ingress --untar --version 0.17.1
+   42  ls -l
+   43  cd nginx-ingress/
+   44  kubectl apply -f crds
+   45  helm install nginx-ingress oci://ghcr.io/nginxinc/charts/nginx-ingress --version 0.17.1
+   46  kubectl -n nginx-ingress get pods
+   47  kubectl -n default  get pods
+   48  kubectl -n default get services
+   49  nano ingress-definition-web-app.yaml
+   50  kubectl apply -f ingress-definition-web-app.yaml
+   51  curl -X GET -H "Host: web-app-1.home-k8s.laba" http://172.21.4.101
